@@ -2,7 +2,7 @@
   "config":
   {
     "hw_platform": ["MTP", "Dragon", "Surf", "HDK"],
-    "soc_id": ["339"]
+    "soc_id": ["339", "361"]
   },
   "ak0991x_0_platform":{
     "owner": "sns_ak0991x",
@@ -21,16 +21,31 @@
         "data": "400"
       },
       "max_bus_speed_khz":{ "type": "int", "ver": "0",
-        "data": "400"
+        "data": "12500"
       },
       "reg_addr_type":{ "type": "int", "ver": "0",
         "data": "0"
+      },
+      "dri_irq_num":{ "type": "int", "ver": "0",
+        "data": "134"
+      },
+      "irq_pull_type":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "irq_is_chip_pin":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "irq_drive_strength":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_trigger_type":{ "type": "int", "ver": "0",
+        "data": "1"
       },
       "num_rail":{ "type": "int", "ver": "0",
         "data": "1"
       },
       "rail_on_state":{ "type": "int", "ver": "0",
-        "data": "1"
+        "data": "2"
       },
       "vddio_rail":{ "type": "str", "ver": "0",
         "data": "/pmic/client/sensor_vddio"
@@ -42,18 +57,63 @@
     ".orient":{
       "owner": "sns_ak0991x",
       "x":{ "type": "str", "ver": "0",
-        "data": "+y"
+        "data": "-y"
       },
       "y":{ "type": "str", "ver": "0",
-        "data": "-x"
+        "data": "+x"
       },
       "z":{ "type": "str", "ver": "0",
-        "data": "+z"
+        "data": "-z"
       }
     },
     ".mag":{
       "owner": "sns_ak0991x",
       ".fac_cal":{
+        "owner": "sns_ak0991x",
+        ".corr_mat":{
+          "owner": "sns_ak0991x",
+          "0_0":{ "type": "flt", "ver": "0",
+            "data": "0.99407958984375"
+          },
+          "0_1":{ "type": "flt", "ver": "0",
+            "data": "-0.00897216796875"
+          },
+          "0_2":{ "type": "flt", "ver": "0",
+            "data": "-0.0108642578125"
+          },
+          "1_0":{ "type": "flt", "ver": "0",
+            "data": "-0.00494384765625"
+          },
+          "1_1":{ "type": "flt", "ver": "0",
+            "data": "1.014892578125"
+          },
+          "1_2":{ "type": "flt", "ver": "0",
+            "data": "0.01177978515625"
+          },
+          "2_0":{ "type": "flt", "ver": "0",
+            "data": "0.013671875"
+          },
+          "2_1":{ "type": "flt", "ver": "0",
+            "data": "-0.010986328125"
+          },
+          "2_2":{ "type": "flt", "ver": "0",
+            "data": "1.01129150390625"
+          }
+        },
+        ".bias":{
+          "owner": "sns_ak0991x",
+          "x":{ "type": "flt", "ver": "0",
+            "data": "0.0"
+          },
+          "y":{ "type": "flt", "ver": "0",
+            "data": "0.0"
+          },
+          "z":{ "type": "flt", "ver": "0",
+            "data": "0.0"
+          }
+        }
+      },
+      ".fac_cal_2":{
         "owner": "sns_ak0991x",
         ".corr_mat":{
           "owner": "sns_ak0991x",
